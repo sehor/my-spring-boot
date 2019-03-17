@@ -10,4 +10,7 @@ public interface JpaAyUserRepository extends JpaRepository<AyUser,String>{
   List<AyUser> findByNameLike(String name);
   List<AyUser> findByIdLikeOrNameLikeOrPasswordLike(
 		  String id,String name,String password);
+  AyUser findByNameAndPassword(String name ,String password);
+  
+  List<AyUser> findByName(String name);
 }
